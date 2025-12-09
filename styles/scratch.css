@@ -1,0 +1,65 @@
+
+
+/* font-family and base colors */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #aec8de;          
+  color: #123;                         
+  margin: 0;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+/* navigation */
+.topnav {
+  margin-bottom: 1rem;
+}
+
+/* generic box style (used by the three divs) */
+.box {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 6px 16px rgba(10,20,40,0.04);
+}
+
+/* three distinct boxes for positioning/styling */
+.box-intro {
+  border-left: 6px solid #0d6efd;
+}
+
+.box-content {
+  border-left: 6px solid #6610f2;
+}
+
+.box-tableau {
+  border-left: 6px solid #198754;
+}
+
+
+/* video wrapper */
+.video-wrapper {
+  max-width: 720px;
+  margin-bottom: 1rem;
+}
+
+/* Tableau wrapper */
+.tableau-wrapper {
+  margin: 0.5rem 0;
+  max-width: 100%;
+  overflow: auto;
+}
+
+
+/* additional styles (total > 4 style definitions) */
+h1 { color: #0b3d91; }
+h2 { color: #0d6efd; }
+a { color: #0b5ed7; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* small responsive tweak */
+@media (max-width: 600px) {
+  .video-wrapper iframe { width: 100%; height: 210px; }
+  .tableau-wrapper iframe { width: 100%; height: 400px; }
+}

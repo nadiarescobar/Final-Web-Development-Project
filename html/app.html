@@ -1,0 +1,78 @@
+<!-- comment her
+Nadia Escobar
+001
+12/04/2025
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Number Guessing Game</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; padding: 2rem; background: #8dc5dc; color: #123; }
+    .card { background: #8dc5dc; padding: 1.5rem; border-radius: 8px; max-width: 520px; margin: 0 auto; box-shadow: 0 8px 20px rgba(0,0,0,0.06); text-align: center; }
+    input[type="number"] { width: 100px; padding: .4rem; font-size: 1rem; }
+    button { padding: 0.5rem 1rem; font-size: 1rem; margin-left: .4rem; }
+    .log { margin-top: 1rem; min-height: 2.2rem; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Number Guessing Game</h2>
+    <p>I’ve picked a number between 1 and 100. Can you guess it?</p>
+
+    <div>
+      <label for="guess">Your guess:</label>
+      <input id="guess" type="number" min="1" max="100" />
+      <button id="btnGuess">Guess</button>
+      <button id="btnReset">New Game</button>
+    </div>
+
+    <div class="log" id="log"></div>
+    <p>Attempts: <span id="attempts">0</span></p>
+  </div>
+
+  <script>
+    (function () {
+      let target, tries;
+      const guessInput = document.getElementById('guess');
+      const btnGuess = document.getElementById('btnGuess');
+      const btnReset = document.getElementById('btnReset');
+      const log = document.getElementById('log');
+      const attempts = document.getElementById('attempts');
+
+      function newGame() {
+        target = Math.floor(Math.random() * 100) + 1;
+        tries = 0;
+        log.textContent = 'Ready! Make a guess.';
+        attempts.textContent = '0';
+        guessInput.value = '';
+        guessInput.focus();
+      }
+
+      btnGuess.addEventListener('click', function () {
+        const val = Number(guessInput.value);
+        if (!val || val < 1 || val > 100) {
+          log.textContent = 'Please enter a number between 1 and 100.';
+          return;
+        }
+        tries++;
+        attempts.textContent = tries;
+        if (val === target) {
+          log.textContent = `🎉 Correct! The number was ${target}. You got it in ${tries} attempt${tries>1?'s':''}.`;
+        } else if (val < target) {
+          log.textContent = 'Too low — try a higher number.';
+        } else {
+          log.textContent = 'Too high — try a lower number.';
+        }
+      });
+
+      btnReset.addEventListener('click', newGame);
+
+      // start
+      newGame();
+    })();
+  </script>
+</body>
+</html>

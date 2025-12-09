@@ -1,0 +1,150 @@
+<!--
+Nadia Escobar
+001
+12/03/2025
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link to your custom stylesheet (from scratch) -->
+  <link rel="stylesheet" href="scratch.css">
+  <style>
+    body { Arial, Helvetica, sans-serif;background-color:pink;}
+    h2 { font-weight: 700; color: #2588b2; }
+    h1{ font-weight: 600;color: darkslateblue; }
+ </style>
+</head>
+<body>
+
+  <!-- Navigation back to professional pages -->
+  <nav class="topnav">
+    <a href="../index.html">← Professional Pages</a> |
+    <a href="resume.html">Résumé (HTML)</a> |
+    <a href="#top-anchor">Top</a> |
+    <a href="app.html">Open Game (Number Guess)</a>
+  </nav>
+
+  <!-- on-page anchor target -->
+  <h1 id="top-anchor">My Scratch Page: Baking</h1>
+
+
+  <div class="box box-intro">
+    <h2>Introduction</h2>
+    <p>I love to bake! It’s one of my favorite hobbies, and on this page, I’ll be sharing some of my favorite recipes that I’ve tried—along with a few that I hope to try soon. </p>
+  </div>
+
+  <div class="box box-content">
+    <h2>My Favorite Recipes</h2>
+
+    <!-- ordered list containing an unordered list  -->
+    <ol>
+      <li>Apple cinnomon Cake 
+        <ul>
+          <li>4 Cups of peeled and sliced granny smith apples</li>
+          <li>2 Cups of sugar</li>
+          <li>2 cups of flour</li>
+          <li>1 1/2 tsp of baking soda</li>
+          <li>2 tsp of salt</li>
+          <li>3 eggs</li>
+          <li>2 tsp of cinnonmon</li>
+          <li>3/4 of vegetable or coconut oil</li>
+          <li>2 tsp of vanilla</li>
+        </ul>Mix ingredients together.Pour into greased pan. Bake at 350 for 50 mins.
+      </li>
+
+          <!-- image not from bootstrap theme  -->
+    <figure>
+      <img src="../images/applecake.jpg" alt="apple cake" height="200">
+      <figcaption>Slice of apple cinnonmon cake.</figcaption>
+    </figure>
+
+      <li>Banana chocolate chip Muffins
+        <ul>
+          <li>4 ripe bananas</li>
+          <li>3/4 unsalted butter</li>
+          <li>1/4 cup sugar</li>
+          <li>2 eggs</li>
+          <li>1 tsp vanilla</li>
+          <li>1 3/4 of all purpose flour</li>
+          <li>1/2 tsp salt</li>
+          <li>1 cup milk chocolate chips</li>
+        </ul> Mix together and bake at 325 for 13 mins.
+
+      </li>
+
+
+
+
+
+    <!-- embedded YouTube video -->
+    <h2>Recipe I want to Try</h2>
+    <p>Christmas Monster Cookies</p>
+<div class="video-wrapper">
+  <iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/bGjXUmtr_t8" 
+          title="Christmas Monster Cookies"
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+  </iframe>
+</div>
+
+
+    <!-- on-page anchor link -->
+    <p><a href="#bottom-anchor">Jump to bottom</a></p>
+  </div>
+
+  <!-- Tableau embed  (LIVE viz required) -->
+  <div class="box box-tableau">
+    <h2>Great British Bake-Off</h2>
+    <P>Embedded tableau visualization of one of my favourite baking shows- Great British Bake-off </P>
+    
+  <div class='tableauPlaceholder' id='viz1765246387253' style='position: relative'>
+    <noscript>
+        <a href='#'>
+            <img alt='The Great British Bake Off'
+                 src='https://public.tableau.com/static/images/Th/TheGreatBritishBakeOff-TableauVis/DashboardFinal/1_rss.png'
+                 style='border: none' />
+        </a>
+    </noscript>
+
+    <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+        <param name='embed_code_version' value='3' /> 
+        <param name='site_root' value='' />
+        <param name='name' value='TheGreatBritishBakeOff-TableauVis/DashboardFinal' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='no' />
+        <param name='static_image' value='https://public.tableau.com/static/images/Th/TheGreatBritishBakeOff-TableauVis/DashboardFinal/1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+    </object>
+</div>
+
+<script type='text/javascript'>
+    var divElement = document.getElementById('viz1765246387253');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width = '100%';
+    vizElement.style.height = '800px';
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+
+
+
+  <div class="box box-bottom" id="bottom-anchor">
+    <h2>Interactive App</h2>
+    <p>Try the small web app: <a href="app.html">Number Guessing Game</a></p>
+  </div>
+
+
+</body>
+</html>
